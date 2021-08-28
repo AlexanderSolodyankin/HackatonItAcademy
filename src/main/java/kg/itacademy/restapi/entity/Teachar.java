@@ -4,7 +4,7 @@ package kg.itacademy.restapi.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "techar")
+@Table(name = "teachar")
 public class Teachar {
 
     @Id
@@ -12,6 +12,7 @@ public class Teachar {
     private Long id;
     private String fullName;
     private String topic;
+    private String phone;
     private String price;
 
     public Long getId() {
@@ -38,6 +39,14 @@ public class Teachar {
         this.topic = topic;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getPrice() {
         return price;
     }
@@ -45,4 +54,6 @@ public class Teachar {
     public void setPrice(String price) {
         this.price = price;
     }
+
+
 }
