@@ -9,8 +9,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String fullName;
-    private String age;
+    private String login;
+    private String password;
 
 
 
@@ -22,19 +22,19 @@ public class User {
         this.id = id;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getLogin() {
+        return login;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public String getAge() {
-        return age;
+    public String getPassword() {
+        return password;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
