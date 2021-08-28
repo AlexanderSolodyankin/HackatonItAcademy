@@ -9,4 +9,5 @@ public interface UserService {
     User getById(Long id);
     User save(User user);
     User deleteById(Long id);
+    User getByLoginAndPassword(String login, String password);
 }

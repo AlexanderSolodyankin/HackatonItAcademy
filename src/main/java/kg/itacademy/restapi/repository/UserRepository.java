@@ -5,4 +5,7 @@ import kg.itacademy.restapi.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
+
+    User getByLoginAndPassword(String login, String password);
+
 }

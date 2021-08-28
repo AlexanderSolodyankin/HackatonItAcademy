@@ -31,9 +31,14 @@ public class UserController {
         return userService.save(user);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public User deleteById(@PathVariable Long id){
         return userService.deleteById(id);
+    }
+
+    @PostMapping("/login" )
+    public User getByLoginAndPassword(@RequestBody User user){
+        return userService.getByLoginAndPassword(user.getLogin(), user.getPassword());
     }
 
 }

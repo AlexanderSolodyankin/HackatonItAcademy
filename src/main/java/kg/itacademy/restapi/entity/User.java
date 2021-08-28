@@ -10,6 +10,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String login;
+    private String phone;
+    private String email;
     private String password;
 
 
@@ -24,6 +26,22 @@ public class User {
 
     public String getLogin() {
         return login;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setLogin(String login) {

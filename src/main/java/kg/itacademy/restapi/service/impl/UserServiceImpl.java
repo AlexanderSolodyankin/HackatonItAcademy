@@ -35,4 +35,15 @@ public class UserServiceImpl implements UserService {
          userRepository.deleteById(id);
         return user;
     }
+
+    @Override
+    public User getByLoginAndPassword(String login, String password) {
+        User user = userRepository.getByLoginAndPassword(login,password);
+        if(user == null){
+            return null;
+        }
+         return user;
+
+    }
+
 }
